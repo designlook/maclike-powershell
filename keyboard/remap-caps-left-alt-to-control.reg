@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; Caps Lock (003A) -> Left Control (001D)
+; Left Alt  (0038) -> Left Control (001D)
+;
+; WARNING: Importing this file replaces any existing registry-based Scancode Map.
+; Administrator approval and a Windows restart are required.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,03,00,00,00,1d,00,3a,00,1d,00,38,00,00,00,00,00
