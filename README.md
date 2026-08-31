@@ -140,6 +140,19 @@ keyboard/restore-default-keyboard.reg
 The restore file removes the entire `Scancode Map`, including mappings created
 by other tools. Restart Windows afterward.
 
+## Troubleshooting
+
+If PowerShell says `MacLike.PowerShell.ps1` is not digitally signed after
+downloading the repository, remove the download marker from the installed helper:
+
+```powershell
+Unblock-File "$HOME\Documents\PowerShell\MacLike.PowerShell.ps1"
+```
+
+Then open a new PowerShell tab. The installer performs this step automatically
+for new installations. If your organization enforces `AllSigned` through Group
+Policy, you will need an administrator-provided signing certificate instead.
+
 ## Uninstall
 
 Open your PowerShell profile:
