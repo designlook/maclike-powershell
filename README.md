@@ -89,6 +89,26 @@ The included registry file maps:
 - Caps Lock → Left Ctrl
 - Left Alt → Left Ctrl
 
+### What the remap does
+
+Windows normally sends each physical key to applications using a hardware
+scancode. The registry file adds a system-wide `Scancode Map` that tells
+Windows to translate Caps Lock and Left Alt into Left Ctrl before applications
+see them. This works in PowerShell, editors, browsers, and other Windows apps.
+
+This makes Windows feel more Mac-like by putting an easy-to-reach Control key
+under the left pinky (Caps Lock), which is useful for shortcuts such as
+`Ctrl+C`, `Ctrl+V`, and `Ctrl+A`. Mapping Left Alt as well provides a second
+convenient Control position.
+
+This is a Control-key remap, not a complete Mac keyboard layout. After applying
+it:
+
+- Caps Lock no longer toggles uppercase.
+- Left Alt no longer acts as Alt.
+- Right Alt is unchanged.
+- The remap is global and requires a Windows restart.
+
 > [!CAUTION]
 > The Windows `Scancode Map` is a single system-wide value. Applying this file
 > replaces any existing registry-based keyboard remaps. It requires administrator
