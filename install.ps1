@@ -18,6 +18,9 @@ if ($sourceFullPath -ne $destinationFullPath) {
     Copy-Item -LiteralPath $sourcePath -Destination $installedHelperPath -Force
 }
 
+# GitHub downloads can carry a Zone.Identifier that RemoteSigned blocks.
+Unblock-File -LiteralPath $installedHelperPath -ErrorAction SilentlyContinue
+
 if (-not (Test-Path -LiteralPath $profilePath)) {
     New-Item -ItemType File -Path $profilePath -Force | Out-Null
 }
