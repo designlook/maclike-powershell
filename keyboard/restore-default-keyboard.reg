@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; Remove the registry-based Scancode Map and restore Windows defaults.
+;
+; WARNING: This removes ALL mappings stored in Scancode Map, including mappings
+; created by other tools. Administrator approval and a restart are required.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=-
